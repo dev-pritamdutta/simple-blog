@@ -1,15 +1,30 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [theme, setTheme] = useState(() => {
+    // Retrieve the saved theme from localStorage or default to 'light'
+    return localStorage.getItem("theme") || "light";
+  });
+
+  useEffect(() => {
+    document.querySelector("html").setAttribute("data-theme", theme);
+    // Save the theme to localStorage
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("synthwave");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
     <div>
-      <div className="navbar bg-base-100 fixed shadow-md  mx-auto px-24 z-10">
+      <div className="navbar bg-base-100 fixed shadow-md mx-auto px-24 z-10">
         <div className="flex-1">
-          <a
-           className="gap-0 text-3xl font-medium text-[#FF748B]"
-          >
-            
+          <a className="gap-0 text-3xl font-medium text-[#FF748B]">
             Bold
             <span className="text-[#4DA1A9]">Bytes</span>
           </a>
@@ -28,8 +43,9 @@ const Navbar = () => {
             <label className="grid cursor-pointer place-items-center">
               <input
                 type="checkbox"
-                value="synthwave"
+                onChange={handleToggle}
                 className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"
+                checked={theme === "synthwave"} // Sync checkbox state with the theme
               />
               <svg
                 className="stroke-base-100 fill-base-100 col-start-1 row-start-1"
