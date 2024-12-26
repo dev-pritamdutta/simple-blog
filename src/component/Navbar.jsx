@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(() => {
@@ -22,24 +23,40 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100 fixed shadow-md mx-auto px-24 z-10">
+      <div className="navbar bg-base-100 fixed shadow-md mx-auto px-24 z-10 ">
         <div className="flex-1">
-          <a className="gap-0 text-3xl font-medium text-[#FF748B]">
+          <Link to="/" className="gap-0 text-3xl font-medium text-[#FF748B]">
             Bold
             <span className="text-[#4DA1A9]">Bytes</span>
-          </a>
+          </Link>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1 font-bold">
-            <li className="text-primary">
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/home">Blogs</a>
-            </li>
-            <li>
-              <a href="/home">Bookmarks</a>
-            </li>
+          <ul className="menu menu-horizontal gap-3  font-bold">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Blogs
+            </NavLink>
+            <NavLink
+              to="/bookmarks"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              BookMark
+            </NavLink>
+
             <label className="grid cursor-pointer place-items-center">
               <input
                 type="checkbox"
