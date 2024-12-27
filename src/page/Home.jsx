@@ -1,14 +1,14 @@
-import React from 'react'
-import Navbar from '../component/Navbar'
-import Blog from './Blog'
+import React from "react";
+import Navbar from "../component/Navbar";
+import Blog from "./Blog";
+import Hero from "../component/Hero";
 
 const Home = () => {
   return (
-    <div className='min-h-screen'>
-        <h2>this is homepage</h2>
-       
+    <div>
+      <Hero />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

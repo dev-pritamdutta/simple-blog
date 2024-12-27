@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100 fixed shadow-md mx-auto px-24 z-10 ">
+      <div className="navbar bg-zinc-800 fixed  mx-auto px-24 z-10 ">
         <div className="flex-1">
           <Link to="/" className="gap-0 text-3xl font-medium text-[#FF748B]">
             Bold
@@ -31,11 +31,11 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal gap-3  font-bold">
+          <ul className="menu menu-horizontal gap-3 text-white  font-bold">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive ? "text-warning font-bold" : "font-bold"
               }
             >
               Home
@@ -43,7 +43,7 @@ const Navbar = () => {
             <NavLink
               to="/blogs"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive ? "text-warning font-bold" : "font-bold"
               }
             >
               Blogs
@@ -51,7 +51,7 @@ const Navbar = () => {
             <NavLink
               to="/bookmarks"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive ? "text-warning font-bold" : "font-bold"
               }
             >
               BookMark
