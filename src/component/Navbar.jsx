@@ -26,8 +26,8 @@ const Navbar = () => {
       <div className="navbar bg-zinc-800 fixed  mx-auto px-24 z-10 ">
         <div className="flex-1">
           <Link to="/" className="gap-0 text-3xl font-medium text-[#FF748B]">
-            Bold
-            <span className="text-[#4DA1A9]">Bytes</span>
+            Tech
+            <span className="text-[#ffffff]">Bytes</span>
           </Link>
         </div>
         <div className="flex-none">

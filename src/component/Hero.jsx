@@ -14,7 +14,7 @@ const Hero = () => {
           <h1 className="mb-5 text-5xl font-bold">
             Welcome to{" "}
             <span class=" font-bold bg-gradient-to-r from-[#f7797d] via-[#FBD786] to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
-              BoldBytes
+              TechBytes
             </span>{" "}
           </h1>
           <p className="mb-5">

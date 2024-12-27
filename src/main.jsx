@@ -12,7 +12,12 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/blogs", element: <Blog /> },
+      { 
+        path: "/blogs",
+         element: <Blog />,
+         loader: () => fetch('https://dev.to/api/articles?per_page=20&top=5')
+
+       },
       { path: "/bookmarks", element: <BookMark /> },
     ],
   },
