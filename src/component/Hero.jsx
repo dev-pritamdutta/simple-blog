@@ -11,11 +11,12 @@ const Hero = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="">
-          <h1 className="mb-5 text-5xl font-bold">Welcome to <span
-  class=" font-bold bg-gradient-to-r from-[#f7797d] via-[#FBD786] to-green-400 text-transparent bg-clip-text bg-300% animate-gradient"
->
-  BoldBytes
-</span> </h1>
+          <h1 className="mb-5 text-5xl font-bold">
+            Welcome to{" "}
+            <span class=" font-bold bg-gradient-to-r from-[#f7797d] via-[#FBD786] to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
+              BoldBytes
+            </span>{" "}
+          </h1>
           <p className="mb-5">
             Innovative Solutions for Modern Problems and curious mind eager to
             understand it
@@ -28,7 +29,7 @@ const Hero = () => {
               <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
               <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
               <span class="relative text-black group-hover:text-white">
-               Read Blogs
+                Read Blogs
               </span>
             </Link>
           </div>
