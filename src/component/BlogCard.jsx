@@ -10,7 +10,7 @@ const BlogCard = ({blog}) => {
             to={`/blog/${id}`}
               rel="noopener noreferrer"
               href="#"
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
+              className="max-w-sm mx-auto  group border-2 border-primary transition hover:scale-105 border-opacity-30 rounded-md hover:border-red-500 hover:no-underline focus:no-underline dark:bg-gray-50"
             >
               <img
                 role="presentation"
